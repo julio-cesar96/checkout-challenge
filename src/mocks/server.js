@@ -11,7 +11,7 @@ const middlewares = jsonServer.defaults()
 server.use(middlewares)
 server.use(jsonServer.bodyParser)
 
-// Simulação de criação de pagamento
+// Simulando criação de pagamento
 server.post('/transactions', (request, response) => {
     const { amount, customer, items, paymentMethod } = request.body
 
@@ -19,7 +19,7 @@ server.post('/transactions', (request, response) => {
         return response.status(400).json({ error: "Dados inválidos" })
     }
 
-    // Simulação de um pagamento falhando ou autorizado aleatoriamente
+    // Simulando um pagamento falhando ou autorizado aleatoriamente
     const status = Math.random() > 0.2 ? 'authorized' : 'failed'
 
     const newTransaction = {
