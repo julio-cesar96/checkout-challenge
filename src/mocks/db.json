@@ -1,0 +1,43 @@
+{
+    "transactions": [
+      {
+        "id": 1,
+        "status": "authorized",
+        "amount": 250.00,
+        "customer": {
+          "firstName": "João",
+          "lastName": "Silva",
+          "document": {
+            "type": "cpf",
+            "number": "123.456.789-00"
+          },
+          "address": {
+            "city": "São Paulo",
+            "street": "Rua das Flores",
+            "number": "100",
+            "country": "Brasil",
+            "state": "SP",
+            "neighborhood": "Centro"
+          }
+        },
+        "items": [
+          {
+            "name": "Notebook",
+            "quantity": 1,
+            "amount": 250.00
+          }
+        ],
+        "paymentMethod": {
+          "type": "card",
+          "card": {
+            "firstDigits": "1234",
+            "lastDigits": "5678",
+            "holderName": "João Silva",
+            "expirationDate": "12/2026",
+            "installments": 10
+          }
+        }
+      }
+    ]
+  }
+  
