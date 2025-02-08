@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Spin, Card, Alert } from "antd";
-import useFetch from "../../hooks/useFetch";  // Importando o hook
+import useFetch from "../../hooks/useFetch"; 
 import { Transaction } from "../../types/Transaction.types";
 import TransactionDetailsHeader from "./TransactionDetailsHeader";
 import TransactionDetailsInfo from "./TransactionDetailsInfo";
