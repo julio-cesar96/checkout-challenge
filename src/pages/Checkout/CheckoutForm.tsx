@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Input, Button, Space } from "antd";
 import { useForm, Controller } from "react-hook-form";
-import { CheckoutFormData } from "./CheckoutSchema"; // 
+import { CheckoutFormData } from "./CheckoutSchema"; 
 
 import { CheckoutSchema } from "./CheckoutSchema"; 
 import { yupResolver } from "@hookform/resolvers/yup";

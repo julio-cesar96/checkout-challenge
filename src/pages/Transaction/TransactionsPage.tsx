@@ -1,5 +1,3 @@
-// src/pages/TransactionsPage.tsx
-
 import React, { useEffect, useState } from "react";
 import { Spin, Alert } from "antd";
 import TransactionTable from "./TransactionTable";

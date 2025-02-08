@@ -1,5 +1,3 @@
-// src/components/TransactionTable.tsx
-
 import React from "react";
 import { Table, Button } from "antd";
 import { Link } from "react-router-dom";
