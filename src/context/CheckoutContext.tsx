@@ -3,7 +3,7 @@ import { CheckoutContextProps } from "../types/CheckoutContext.types";
 
 const CheckoutContext = createContext<CheckoutContextProps | undefined>(undefined);
 
-export const CheckoutProvider = ({ children}: {children: ReactNode }) => {
+const CheckoutProvider = ({ children}: {children: ReactNode }) => {
     const [cartItems, setCartItems] = useState<any[]>([]);
 
     return (
@@ -12,3 +12,5 @@ export const CheckoutProvider = ({ children}: {children: ReactNode }) => {
         </CheckoutContext.Provider>
     );
 }
+
+export default CheckoutProvider;
