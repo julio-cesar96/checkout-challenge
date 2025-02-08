@@ -1,19 +1,16 @@
 import React from "react";
 import 'antd/dist/antd.css';
 import ReactDOM from "react-dom/client";
-import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { CheckoutProvider } from "./context/CheckoutContext "
+import { CheckoutProvider } from "./context/Checkout/CheckoutContext"
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <ChakraProvider>
       <CheckoutProvider>
         <BrowserRouter>
           <App />
         </BrowserRouter>
       </CheckoutProvider>
-    </ChakraProvider>
   </React.StrictMode>
 );
