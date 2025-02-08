@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import CheckoutPage from "./pages/CheckoutPage";
-import TransactionsPage from "./pages/TransactionsPage";
-import TransactionDetailsPage from "./pages/TransactionDetailsPage";
+import CheckoutPage from "./pages/Checkout/CheckoutPage";
+import TransactionsPage from "./pages/Transaction/TransactionsPage";
+import TransactionDetailsPage from "./pages/TransactionDetails/TransactionDetailsPage"
 
 function App() {
   return (

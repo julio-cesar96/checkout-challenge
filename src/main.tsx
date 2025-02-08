@@ -1,4 +1,5 @@
 import React from "react";
+import 'antd/dist/antd.css';
 import ReactDOM from "react-dom/client";
 import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
