@@ -1,9 +1,6 @@
-export interface CartItem {
-    id: number;
-    name: string;
-    quantity: number;
-    price: number;
-  }
+import { CartItem } from "../../types/CartItems.types";
+
+export type { CartItem };
 
 export interface CheckoutContextProps {
     cartItems: CartItem[];
