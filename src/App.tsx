@@ -6,7 +6,7 @@ import TransactionDetailsPage from "./pages/TransactionDetails/TransactionDetail
 function App() {
   return (
     <Routes>
-      <Route path="/checkout" element={<CheckoutPage />} />
+      <Route path="/" element={<CheckoutPage />} />
       <Route path="/transactions" element={<TransactionsPage />} />
       <Route path="/transactions/:id" element={<TransactionDetailsPage />} />
     </Routes>
