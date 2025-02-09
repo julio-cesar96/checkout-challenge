@@ -1,4 +1,3 @@
-// CheckoutPage.tsx
 import { Layout, Typography, Space } from "antd"; 
 import CheckoutForm from "./CheckoutForm";
 import CartItems from "../../components/CartItems/CartItems";
@@ -8,9 +7,9 @@ const { Title } = Typography;
 const { Content } = Layout;
 
 const cartItems = [
-  { id: 1, name: "Item 1", quantity: 2, price: 50 },
-  { id: 2, name: "Item 2", quantity: 1, price: 30 },
-  { id: 3, name: "Item 3", quantity: 3, price: 20 },
+  { id: 1, name: "Item 1", quantity: 2, amount: 50 },
+  { id: 2, name: "Item 2", quantity: 1, amount: 30 },
+  { id: 3, name: "Item 3", quantity: 3, amount: 20 },
 ];
 
 const CheckoutPage: React.FC = () => {

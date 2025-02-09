@@ -1,4 +1,3 @@
-// src/context/CheckoutContext.tsx
 import { createContext, useState, ReactNode } from "react";
 import { CheckoutContextProps } from "./CheckoutContext.types";
 import { CartItem } from "./CheckoutContext.types";

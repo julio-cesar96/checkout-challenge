@@ -22,7 +22,7 @@ const CartItems: React.FC<CartItemsProps> = ({ items }) => {
             <Card title={item.name}>
               <Text>Quantidade: {item.quantity}</Text>
               <br />
-              <Text>Preço: R${item.price.toFixed(2)}</Text>
+              <Text>Preço: R${item.amount.toFixed(2)}</Text>
             </Card>
           </Col>
         ))}
