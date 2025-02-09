@@ -45,6 +45,17 @@ server.post('/transactions', (request, response) => {
     response.status(201).json(newTransaction)
 })
 
+server.get('/transactions/:id', (request, response) => {
+    const { id } = request.params
+    const transaction = router.db.get('transactions').find({ id: Number(id) }).value()
+
+    if (!transaction) {
+        return response.status(404).json({ error: "Transação não encontrada" })
+    }
+
+    response.json(transaction)
+})
+
 server.use(router)
 
 server.listen(5000, () => {
