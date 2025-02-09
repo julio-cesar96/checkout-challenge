@@ -16,7 +16,7 @@ const CheckoutForm: React.FC = () => {
   };
 
   return (
-    <Form onFinish={handleSubmit(onSubmit)} layout="vertical" style={{ padding: "20px" }}>
+    <Form onFinish={handleSubmit(onSubmit)} layout="vertical">
       <Space direction="vertical" size="middle" style={{ width: "100%" }}>
         <Form.Item
           label="Número do Cartão"
@@ -30,7 +30,7 @@ const CheckoutForm: React.FC = () => {
               <Input
                 {...field}
                 placeholder="Número do cartão"
-                maxLength={16}
+                maxLength={19}
               />
             )}
           />
