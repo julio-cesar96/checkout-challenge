@@ -25,7 +25,6 @@ const CheckoutProvider = ({ children }: { children: ReactNode }) => {
       address.street.trim() !== "" &&
       address.state.trim() !== "" &&
       address.country.trim() !== "" &&
-      card.holderName.trim() !== "" &&
       card.firstDigits.length === 4 &&
       card.lastDigits.length === 4 &&
       card.expirationDate.trim() !== "" &&

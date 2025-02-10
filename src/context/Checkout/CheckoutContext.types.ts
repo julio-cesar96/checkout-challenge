@@ -20,9 +20,8 @@ export interface CustomerInfo {
   }
 
   export interface PaymentInfo {
-    type: "card";
+    type: string;
     card: {
-      holderName: string;
       firstDigits: string;
       lastDigits: string;
       expirationDate: string;
@@ -35,7 +34,7 @@ export interface CustomerInfo {
     setCartItems: (items: CartItem[]) => void;
     
     customerInfo: CustomerInfo | null;
-    setCustomerInfo: (info: CustomerInfo) => void;
+    setCustomerInfo: React.Dispatch<React.SetStateAction<CustomerInfo>>;
   
     paymentInfo: PaymentInfo | null;
     setPaymentInfo: (info: PaymentInfo) => void;
