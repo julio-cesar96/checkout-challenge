@@ -11,39 +11,46 @@ const middlewares = jsonServer.defaults()
 server.use(middlewares)
 server.use(jsonServer.bodyParser)
 
-// Simulando criação de pagamento
 server.post('/transactions', (request, response) => {
-    const { amount, customer, items, paymentMethod } = request.body
+    try {
+        console.log('Dados recebidos:', JSON.stringify(request.body, null, 2));
+        
+        const { amount, customer, items, paymentMethod } = request.body
 
-    if (!amount || !customer || !items || !paymentMethod) {
-        return response.status(400).json({ error: "Dados inválidos" })
-    }
+        if (!amount || !customer || !items || !paymentMethod) {
+            return response.status(400).json({ 
+                error: "Dados inválidos",
+                details: "Todos os campos são obrigatórios" 
+            });
+        }
 
-    // Simulando um pagamento falhando ou autorizado aleatoriamente
-    const status = Math.random() > 0.2 ? 'authorized' : 'failed'
-
-    const newTransaction = {
-        id: Date.now(),
-        status,
-        amount,
-        customer,
-        items,
-        paymentMethod: {
-            type: 'card',
-            card: {
-                firstDigits: paymentMethod.card.number.substring(0, 4),
-                lastDigits: paymentMethod.card.number.slice(-4),
-                holderName: paymentMethod.card.holderName,
-                expirationDate: paymentMethod.card.expirationDate,
-                installments: paymentMethod.card.installments
+        const newTransaction = {
+            id: Date.now(),
+            status: Math.random() > 0.2 ? 'authorized' : 'failed',
+            amount,
+            customer,
+            items,
+            paymentMethod: {
+                type: paymentMethod.type,
+                card: {
+                    firstDigits: paymentMethod.card.firstDigits,
+                    lastDigits: paymentMethod.card.lastDigits,
+                    expirationDate: paymentMethod.card.expirationDate,
+                    installments: paymentMethod.card.installments
+                }
             }
         }
+
+        router.db.get('transactions').push(newTransaction).write()
+        return response.status(201).json(newTransaction);
+    } catch (error) {
+        console.error('Erro ao processar transação:', error);
+        return response.status(500).json({ 
+            error: "Erro interno do servidor",
+            details: error.message 
+        });
     }
-
-    router.db.get('transactions').push(newTransaction).write()
-
-    response.status(201).json(newTransaction)
-})
+});
 
 server.get('/transactions/:id', (request, response) => {
     const { id } = request.params

@@ -1,43 +1,145 @@
 {
-    "transactions": [
-      {
-        "id": 1,
-        "status": "authorized",
-        "amount": 250.00,
-        "customer": {
-          "firstName": "João",
-          "lastName": "Silva",
-          "document": {
-            "type": "cpf",
-            "number": "123.456.789-00"
-          },
-          "address": {
-            "city": "São Paulo",
-            "street": "Rua das Flores",
-            "number": "100",
-            "country": "Brasil",
-            "state": "SP",
-            "neighborhood": "Centro"
-          }
+  "transactions": [
+    {
+      "id": 1739150294342,
+      "status": "authorized",
+      "amount": 550,
+      "customer": {
+        "document": {
+          "type": "",
+          "number": "13746024773"
         },
-        "items": [
-          {
-            "name": "Notebook",
-            "quantity": 1,
-            "amount": 250.00
-          }
-        ],
-        "paymentMethod": {
-          "type": "card",
-          "card": {
-            "firstDigits": "1234",
-            "lastDigits": "5678",
-            "holderName": "João Silva",
-            "expirationDate": "12/2026",
-            "installments": 10
-          }
+        "firstName": "Julio Cesar",
+        "lastName": "Brito da Silva",
+        "address": {
+          "city": "Rio de Janeiro",
+          "street": "Rua Salvador Rizzo",
+          "number": "144",
+          "country": "Brasil",
+          "state": "Rio de Janeiro",
+          "neighborhood": "Inhauma"
+        }
+      },
+      "items": [
+        {
+          "name": "Produto A",
+          "quantity": 2,
+          "amount": 100
+        },
+        {
+          "name": "Produto B",
+          "quantity": 1,
+          "amount": 200
+        },
+        {
+          "name": "Produto C",
+          "quantity": 3,
+          "amount": 50
+        }
+      ],
+      "paymentMethod": {
+        "type": "card",
+        "card": {
+          "firstDigits": "5557",
+          "lastDigits": "5386",
+          "expirationDate": "09/26",
+          "installments": 6
         }
       }
-    ]
-  }
-  
+    },
+    {
+      "id": 1739150938935,
+      "status": "authorized",
+      "amount": 550,
+      "customer": {
+        "document": {
+          "type": "",
+          "number": "13746024773"
+        },
+        "firstName": "Julio Cesar",
+        "lastName": "Brito da Silva",
+        "address": {
+          "city": "Rio de Janeiro",
+          "street": "Rua Salvador Rizzo",
+          "number": "144",
+          "country": "Brasil",
+          "state": "Rio de Janeiro",
+          "neighborhood": "Inhauma"
+        }
+      },
+      "items": [
+        {
+          "name": "Produto A",
+          "quantity": 2,
+          "amount": 100
+        },
+        {
+          "name": "Produto B",
+          "quantity": 1,
+          "amount": 200
+        },
+        {
+          "name": "Produto C",
+          "quantity": 3,
+          "amount": 50
+        }
+      ],
+      "paymentMethod": {
+        "type": "card",
+        "card": {
+          "firstDigits": "5557",
+          "lastDigits": "5386",
+          "expirationDate": "09/26",
+          "installments": 5
+        }
+      }
+    },
+    {
+      "id": 1739151545932,
+      "status": "authorized",
+      "amount": 550,
+      "customer": {
+        "document": {
+          "type": "",
+          "number": "12268952711"
+        },
+        "firstName": "Thayanne",
+        "lastName": "Andrade",
+        "address": {
+          "city": "Rio de Janeiro",
+          "street": "Rua A",
+          "number": "10",
+          "country": "Brasil",
+          "state": "Rio de Janeiro",
+          "neighborhood": "Cosmos"
+        }
+      },
+      "items": [
+        {
+          "name": "Produto A",
+          "quantity": 2,
+          "amount": 100
+        },
+        {
+          "name": "Produto B",
+          "quantity": 1,
+          "amount": 200
+        },
+        {
+          "name": "Produto C",
+          "quantity": 3,
+          "amount": 50
+        }
+      ],
+      "paymentMethod": {
+        "type": "card",
+        "card": {
+          "firstDigits": "5402",
+          "lastDigits": "0194",
+          "expirationDate": "10/26",
+          "installments": 3
+        }
+      }
+    }
+  ]
+}
