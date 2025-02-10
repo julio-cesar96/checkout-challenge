@@ -1,6 +1,6 @@
 import React from "react";
 import { Spin, Alert } from "antd";
-import TransactionTable from "./TransactionTable";
+import TransactionTable from "../../components/TransactionTable/TransactionTable";
 import useFetch from "../../hooks/useFetch";
 import { Transaction } from "../../types/Transaction.types";
 

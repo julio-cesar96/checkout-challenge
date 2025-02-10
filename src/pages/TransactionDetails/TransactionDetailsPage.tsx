@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { Spin, Card, Alert } from "antd";
 import useFetch from "../../hooks/useFetch"; 
 import { Transaction } from "../../types/Transaction.types";
-import TransactionDetailsHeader from "./TransactionDetailsHeader";
-import TransactionDetailsInfo from "./TransactionDetailsInfo";
+import TransactionDetailsHeader from "../../components/TransactionDetailsHeader/TransactionDetailsHeader";
+import TransactionDetailsInfo from "../../components/TransactionDetailsInfo/TransactionDetailsInfo";
 
 const TransactionDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
