@@ -27,14 +27,14 @@ const CustomerInfo: React.FC = () => {
   
 
   const handleChange = (field: string, value: string) => {
-    setCustomerInfo((prev: CustomerInfo) => {
-      if (!prev) return defaultCustomerInfo;
+    setCustomerInfo((prev) => {
+      const current = prev ?? defaultCustomerInfo; // Garantimos que current nunca será null
   
       if (field.startsWith("document.")) {
         return {
-          ...prev,
+          ...current,
           document: {
-            ...prev.document,
+            ...current.document,
             [field.split(".")[1]]: value,
           },
         };
@@ -42,17 +42,22 @@ const CustomerInfo: React.FC = () => {
   
       if (field.startsWith("address.")) {
         return {
-          ...prev,
+          ...current,
           address: {
-            ...prev.address,
+            ...current.address,
             [field.split(".")[1]]: value,
           },
         };
       }
   
-      return { ...prev, [field]: value };
+      // Retorno sempre com o tipo `CustomerInfo` completo
+      return { 
+        ...current, 
+        [field]: value 
+      };
     });
   };
+  
 
   return (
     <div style={{ width: "100%", marginBottom: "20px" }}>
