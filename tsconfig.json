@@ -5,9 +5,11 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "skipLibCheck": true,
+    "esModuleInterop": true,
     "paths": {
       "@/*": ["./src/*"]
     }
