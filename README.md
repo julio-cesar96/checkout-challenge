@@ -7,6 +7,7 @@ Este projeto é uma aplicação de checkout, onde o objetivo é implementar func
 
 - **React**: Biblioteca para a construção da interface do usuário.
 - **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **Context API**: Para compartilhamento de dados de forma global
 - **Vite**: Ferramenta de build moderna que oferece uma experiência de desenvolvimento rápida.
 - **JSON-Server**: Utilizado para simular uma API RESTful durante o desenvolvimento.
 - **Ant Design**: Bibliteca de UI.
