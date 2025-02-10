@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Spin, Card, Alert } from "antd";
 import useFetch from "../../hooks/useFetch"; 
@@ -8,6 +8,10 @@ import TransactionDetailsInfo from "../../components/TransactionDetailsInfo/Tran
 
 const TransactionDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+
+  useEffect(() => {
+    document.title = `Transação ${id}`;
+  }, [id])
 
   const { data: transaction, loading, error } = useFetch<Transaction>({
     url: `http://localhost:5000/transactions/${id}`,
