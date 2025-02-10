@@ -1,5 +1,5 @@
 import { createContext, useState, ReactNode, useMemo } from "react";
-import { CheckoutContextProps, CustomerInfo, PaymentInfo } from "./CheckoutContext.types";
+import { CheckoutContextProps, CustomerInfoProps, PaymentInfo } from "./CheckoutContext.types";
 import { CartItem } from "./CheckoutContext.types";
 
 
@@ -8,7 +8,7 @@ const CheckoutContext = createContext<CheckoutContextProps | undefined>(undefine
 
 const CheckoutProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const [customerInfo, setCustomerInfo] = useState<CustomerInfo | null>(null);
+  const [customerInfo, setCustomerInfo] = useState<CustomerInfoProps | null>(null);
   const [paymentInfo, setPaymentInfo] = useState<PaymentInfo | null>(null);
 
   const isCheckoutValid = useMemo(() => {

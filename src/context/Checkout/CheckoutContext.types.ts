@@ -2,7 +2,7 @@ import { CartItem } from "../../types/CartItems.types";
 
 export type { CartItem };
 
-export interface CustomerInfo {
+export interface CustomerInfoProps {
     firstName: string;
     lastName: string;
     document: {
@@ -33,8 +33,8 @@ export interface CustomerInfo {
     cartItems: CartItem[];
     setCartItems: (items: CartItem[]) => void;
     
-    customerInfo: CustomerInfo | null;
-    setCustomerInfo: React.Dispatch<React.SetStateAction<CustomerInfo | null>>;
+    customerInfo: CustomerInfoProps | null;
+    setCustomerInfo: React.Dispatch<React.SetStateAction<CustomerInfoProps | null>>;
   
     paymentInfo: PaymentInfo | null;
     setPaymentInfo: React.Dispatch<React.SetStateAction<PaymentInfo | null>>;
