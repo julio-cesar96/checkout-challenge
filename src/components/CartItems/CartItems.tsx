@@ -1,12 +1,9 @@
-// CartItems.tsx
 import React from "react";
 import { Card, Col, Row, Typography } from "antd";
 import { CartItem } from "../../types/CartItems.types";
 
 const { Text } = Typography;
 const { Title } = Typography
-
-
 
 interface CartItemsProps {
   items: CartItem[];
