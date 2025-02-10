@@ -15,11 +15,15 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": ["@testing-library/jest-dom", "<rootDir>/setupTests.ts"]
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom",
+      "<rootDir>/setupTests.ts"
+    ]
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
     "@hookform/resolvers": "^3.10.0",
+    "@testing-library/user-event": "^14.6.1",
     "antd": "^5.23.4",
     "json-server": "^0.17.4",
     "next-themes": "^0.4.4",
