@@ -3,7 +3,7 @@ import CheckoutForm from "../../components/CheckoutForm/CheckoutForm";
 import CartItems from "../../components/CartItems/CartItems";
 import CustomerInfo from "../../components/CustomerInfo/CustomerInfo";
 import useCheckout from "../../hooks/useCheckout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SuccessModal from "../../components/SuccessModal/SuccessModal";
 import ErrorModal from "../../components/ErrorModal/ErrorModal";
 const { Title } = Typography;
@@ -64,6 +64,10 @@ const CheckoutPage: React.FC = () => {
       }
     }
   };
+
+  useEffect(() => {
+    document.title = "Checkout";
+  }, [])
 
   return (
     <Layout style={{ minHeight: "100vh", padding: "20px" }}>
