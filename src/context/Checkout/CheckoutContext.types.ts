@@ -34,10 +34,10 @@ export interface CustomerInfo {
     setCartItems: (items: CartItem[]) => void;
     
     customerInfo: CustomerInfo | null;
-    setCustomerInfo: React.Dispatch<React.SetStateAction<CustomerInfo>>;
+    setCustomerInfo: React.Dispatch<React.SetStateAction<CustomerInfo | null>>;
   
     paymentInfo: PaymentInfo | null;
-    setPaymentInfo: (info: PaymentInfo) => void;
+    setPaymentInfo: React.Dispatch<React.SetStateAction<PaymentInfo | null>>;
   
     isCheckoutValid: boolean;
   }
