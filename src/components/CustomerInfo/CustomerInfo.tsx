@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Input, Select, Space, Typography } from "antd";
 import useCheckout from "../../hooks/useCheckout";
-import type { CustomerInfo } from "../../context/Checkout/CheckoutContext.types";
+import type { CustomerInfoProps } from "../../context/Checkout/CheckoutContext.types";
 
 const { Title } = Typography;
 const { Option } = Select;
@@ -11,7 +11,7 @@ const CustomerInfo: React.FC = () => {
 
   const { customerInfo, setCustomerInfo } = useCheckout();
 
-  const defaultCustomerInfo: CustomerInfo = {
+  const defaultCustomerInfo: CustomerInfoProps = {
     document: { type: "", number: "" },
     firstName: "",
     lastName: "",
@@ -28,7 +28,7 @@ const CustomerInfo: React.FC = () => {
 
   const handleChange = (field: string, value: string) => {
     setCustomerInfo((prev) => {
-      const current = prev ?? defaultCustomerInfo; // Garantimos que current nunca será null
+      const current = prev ?? defaultCustomerInfo; 
   
       if (field.startsWith("document.")) {
         return {
